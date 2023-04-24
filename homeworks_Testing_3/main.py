@@ -113,3 +113,18 @@ for i in range (len(list)):
         if list10[j] == list[i]: sum +=10
 print(sum)
 """
+
+dictionaryScrabble = {1: 'AEIOULNSTRАВЕИНОРСТ', # dictionary = {Key : Value}
+            2: 'DGДКЛМПУ',
+            3: 'BCMPБГЁЬЯ',
+            4: 'FHVWYЙЫ',
+            5: 'KЖЗХЦЧ',
+            8: 'JXШЭЮ',
+            10: 'QZФЩЪ'}
+word = input("Введите слово: ").upper()
+
+# input() -> qwerty
+# key: 1, 2, 3, 4, 5, 8, 10
+# value: AEIOULNSTRАВЕИНОРСТ, DGДКЛМПУ, ..., etc
+# letter Q, W, E, R, T, Y from input
+print(sum([key for letter in word for key, value in dictionaryScrabble.items() if letter in value]))
