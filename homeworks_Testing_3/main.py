@@ -52,12 +52,39 @@ print(max)
 
 
 
-# test = 1
-# count = {'1': 'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т', '2': 'D, G, Д, К, Л, М, П, У', '3': 'B, C, M, P, Б, Г, Ё, Ь, Я', '4': 'F, H, V, W, Y, Й, Ы', '5': 'K, Ж, З, Х, Ц, Ч', '8': 'J, X, Ш, Э, Ю', '10': 'Q, Z, Ф, Щ, Ъ'}
-# list = input("Введите слово: ")
-# for i in range (len(count['1'])):
-#     for j in range (len(list)):
+# В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность.
+# Напишите программу, которая вычисляет стоимость введенного пользователем слова.
+# Будем считать, что на вход подается только одно слово,
+# которое содержит либо только английские,
+# либо только русские буквы.
 
+
+# Решение через словарь
+"""
+scrabble = {'1': 'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т', '2': 'D, G, Д, К, Л, М, П, У', '3': 'B, C, M, P, Б, Г, Ё, Ь, Я', '4': 'F, H, V, W, Y, Й, Ы', '5': 'K, Ж, З, Х, Ц, Ч', '8': 'J, X, Ш, Э, Ю', '10': 'Q, Z, Ф, Щ, Ъ'}
+count = [*scrabble]
+list = input("Введите слово: ").upper()
+sum = 0
+
+for i in range (len(list)):
+    for j in range (len(scrabble[count[0]])):
+        if (scrabble[count[0]])[j] == list[i]: sum += int(count[0])
+    for j in range (len(scrabble[count[1]])):
+        if (scrabble[count[1]])[j] == list[i]: sum += int(count[1])
+    for j in range (len(scrabble[count[2]])):
+        if (scrabble[count[2]])[j] == list[i]: sum += int(count[2])
+    for j in range (len(scrabble[count[3]])):
+        if (scrabble[count[3]])[j] == list[i]: sum += int(count[3])
+    for j in range (len(scrabble[count[4]])):
+        if (scrabble[count[4]])[j] == list[i]: sum += int(count[4])
+    for j in range (len(scrabble[count[5]])):
+        if (scrabble[count[5]])[j] == list[i]: sum += int(count[5])
+    for j in range (len(scrabble[count[6]])):
+        if (scrabble[count[6]])[j] == list[i]: sum += int(count[6])
+print(sum)
+"""
+
+# Решение через списки
 """
 list1 = 'AEIOULNSTRАВЕИНОРСТ'
 list2 = 'DGДКЛМПУ'
